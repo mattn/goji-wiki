@@ -10,6 +10,8 @@ Example Wiki application using goji/pango2/genmai
 $ ./goji-wiki
 ```
 
+Open browser http://localhost:8000/
+
 ## Requirements
 
 * golang
