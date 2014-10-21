@@ -2,6 +2,8 @@
 
 Example Wiki application using goji/pango2/genmai
 
+![](http://go-gyazo.appspot.com/057e8a17bb9e6aaf.png)
+
 ## Usage
 
 ```
