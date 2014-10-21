@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net/http"
 	"net/url"
@@ -74,6 +75,16 @@ func main() {
 		DB:  db,
 	}
 	pongo2.Globals["wiki"] = wiki
+	pongo2.RegisterFilter("to_localdate", func(in *pongo2.Value, param *pongo2.Value) (out *pongo2.Value, err *pongo2.Error) {
+		date, ok := in.Interface().(time.Time)
+		if !ok {
+			return nil, &pongo2.Error{
+				Sender:   "to_localdate",
+				ErrorMsg: fmt.Sprintf("Date must be of type time.Time not %T ('%v')", in, in),
+			}
+		}
+		return pongo2.AsValue(date.Local()), nil
+	})
 
 	goji.Use(middleware.Recoverer)
 	goji.Use(middleware.NoCache)

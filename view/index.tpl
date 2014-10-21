@@ -10,7 +10,7 @@
 		<h1 class="title">Wiki Pages</h1>
 		<ul>
 		{% for page in pages %}
-		<li><a href="{{ page.URL }}">{{ page.Title }}</a> <span class="date">{{ page.UpdatedAt | date: "2006/01/02 03:04:05" }}</span></li>
+		<li><a href="{{ page.URL }}">{{ page.Title }}</a> <span class="date">{{ page.UpdatedAt | to_localdate | date: "2006/01/02 03:04:05" }}</span></li>
 		{% endfor %}</ul>
 	</div>
 </body>
