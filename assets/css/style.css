@@ -1,0 +1,32 @@
+#content {
+  margin: 1em;
+}
+body{
+  background:#627d4d url(../image/y-u-no.png) no-repeat fixed right bottom;  
+  height:100%;
+  font-family:Arial,'Helvetica Neue',Helvetica,sans-serif;
+}
+.title {
+  color:#fff;
+  text-shadow:0 1px 4px rgba(0,0,0,0.68);
+  letter-spacing:-1px;
+  margin:0
+}
+.body {
+  margin-left: 1em;
+  padding: 0.1em 1em 0.1em 1em;
+  background:#728d5d;
+  opacity: 0.9;
+}
+a, a:link {
+  color: #002299;
+}
+a:active, a:hover {
+  color: #002299;
+}
+a:visited {
+  color: #002299;
+}
+.date {
+  font-size: 0.6em;
+}
