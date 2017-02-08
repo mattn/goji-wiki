@@ -68,7 +68,7 @@ func main() {
 	}
 
 	// setup pongo
-	pongo2.DefaultSet.SetBaseDirectory("view")
+	pongo2.DefaultLoader.SetBaseDir("view")
 
 	wiki := &Wiki{
 		URL: "/",
