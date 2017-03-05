@@ -79,8 +79,8 @@ func main() {
 		date, ok := in.Interface().(time.Time)
 		if !ok {
 			return nil, &pongo2.Error{
-				Sender:   "to_localdate",
-				ErrorMsg: fmt.Sprintf("Date must be of type time.Time not %T ('%v')", in, in),
+				Sender:    "to_localdate",
+				OrigError: fmt.Errorf("Date must be of type time.Time not %T ('%v')", in, in),
 			}
 		}
 		return pongo2.AsValue(date.Local()), nil
